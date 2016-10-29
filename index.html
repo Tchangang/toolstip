@@ -1,0 +1,128 @@
+<!doctype html>
+<html ng-app="emailpermutator" style="height:100%;">
+  	<head>
+	    <!-- META -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	    <title>Toolstip, ajoutez simplement un guide utilisateur à tous vos projets</title>
+
+	    <!-- SCROLLS -->
+
+	    <style>
+	        html                    { overflow-y:scroll; }
+	        body                    { padding-top:50px; }
+	        #todo-list              { margin-bottom:30px; }
+
+	        
+
+	    </style>
+	      
+	    <meta name="theme-color" content="#ffffff">
+	    <meta name='title' CONTENT='Toostip'>
+	    <meta name='description' CONTENT="Ajouter un guide utilisateur à vos applications web :-)">
+	    <meta name='author' CONTENT='Tchangang Boris-Emmanuel'>
+	    <meta name='language' CONTENT='fr'>
+	    <meta http-equiv ='vw96.object type' CONTENT="Home app :-)">
+	    <meta name='robots' CONTENT='all'>
+
+	    <meta property="og:type" content="website" />
+	    <meta property="og:site_name" content="Toolstips" /> 
+	    <meta property="og:url" content="https://github.com/Tchangang/toolstip" /> 
+	    <meta property="og:title" content="Toolstip" />
+	    <meta property="og:description" content="Toolstips : Ajouter un guide utilisateur à vos applications web :-)" />
+
+
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+
+	    <!-- <link rel="stylesheet" href="/less/main.css" type="text/css"><!-- load bootstrap
+	     SPELLS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	    <!-- Latest compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	    <!-- Optional theme -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	    <!-- <link href="https://cdn.rawgit.com/Tchangang/toolstip/master/tips.css" rel="stylesheet" > -->
+	    <link href="./tips.css" rel="stylesheet" >
+	</head>
+    <body style="padding:0px;height:100%;background:white!important;" id="body" >
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12">
+	    			<div class="col-md-6 col-md-offset-3 tipstools" style="background:white;text-align:center;"  tips-msg="Guide d'utilisation : Découvrez comment utiliser la librairie Tipstools :-)" tips-pos="1">
+	    				<h1 style="">Guide d'utilisation</h1>
+	    			</div>
+	    			<div class="col-md-12" style="text-align:center;">
+	    				<button style="background:white;color:#4099FF;padding:10px 20px;border:2px solid #4099FF;margin-top:20px;font-size:12px;" id="reclick">
+	    					Relancer le guide
+	    				</button>
+	    			</div>
+	    			<div class="col-md-12 tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="Deuxième carré qui permet de montrer à l'utilisateur ou on se trouve :-)" tips-pos="2">
+	    				<b>1 -</b> Inclure le fichier javascript : "https://raw.githubusercontent.com/Tchangang/toolstip/master/tips.js"
+	    			</div>
+	    			<div class="col-md-12 tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="Deuxième carré qui permet de montrer à l'utilisateur ou on se trouve :-)" tips-pos="2">
+	    				<b>2 -</b> Inclure le fichier de style : "https://cdn.rawgit.com/Tchangang/toolstip/master/tips.css"
+	    			</div>
+
+	    			<div class="col-md-12 tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="Deuxième carré qui permet de montrer à l'utilisateur ou on se trouve :-)" tips-pos="3">
+	    				<b>3 -</b> Utilisation
+	    				<div class="col-md-12">
+	    					Créez une div, un bouton ou peu importe avec la classe : "tipstools"
+	    				</div>
+	    				<div class="col-md-12">
+	    					Ajoutez ensuite un attribut data-msg avec le message que vous voulez afficher
+	    				</div>
+	    				<div class="col-md-12">
+	    					<code>
+	    						Ajoutez enfin un dernier attribut tips-pos qui correspond à la position dans le guide d'utilisateur. Par exemple cette étape est la numéro 3 donc j'ai utilisé l'attribut tips-pos="3".
+	    					</code>
+	    				</div>
+	    				<div class="col-md-6 col-md-offset-3" style="text-align:left;margin-top:20px;">
+	    					<pre style="text-align:left;">
+	    						<code style="text-align:left;">
+	    							< div class="col-md-12 tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="Deuxième carré qui permet de montrer à l'utilisateur ou on se trouve :-)" tips-pos="3">
+					    				lorem ipsum
+				    				&#60; div>
+	    						</code>
+	    					</pre>
+	    				</div>
+	    			</div>
+
+	    			<div class="col-md-12 tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="Les fichiers n'ont pas été 'minify' volontairement. Vous pouvez voir comment ils ont été écris et même les modifier :-) si vous le souhaitez :-)" tips-pos="4">
+	    				Informations supplémentaires
+	    			</div>
+
+	    			<div class="col-md-12 center" style="text-align:center;">
+	    				<button style="background:white;color:#4099FF;padding:10px 20px;border:2px solid #4099FF;margin-top:20px;font-size:12px;" class="tipstools"  tips-msg="J'ai écris cette petite librairie rapidement pour que tout le monde puisse ajouter un guide de manière assez simple. N'hésitez pas à me donner vos retours si vous avez des bugs, suggestions, remarques ou autres. :-)" tips-pos="5">
+	    					Donnez moi vos retours :-)
+	    				</button>
+	    			</div>
+	    		</div>
+    		</div>
+    	</div>
+    	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    	<!-- <script src="https://raw.githubusercontent.com/Tchangang/toolstip/master/tips.js"></script>-->
+    	 <script src="./tips.js"></script>
+	    <!-- Latest compiled and minified JavaScript -->
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	    <script>
+            $(document).ready(function(){
+            	// var tips = new tooltips();
+            	// test();
+            	var obj = new myTips();
+            	obj.setNexttext('Suivant');
+				obj.init_tooltips();
+
+				$('code').each(function () {
+				    $(this).text($(this).html());
+				});
+
+				$('#reclick').click(function(){
+					obj.restart();
+				});
+            });
+	    </script>
+    </body>
+</html>
