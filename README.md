@@ -7,9 +7,9 @@ Ajoutez un guide utilisateur à votre application / site web en quelques lignes 
 
 3 - Créez une div avec la classe tipstools, les attributs tips-msg (texte à afficher pour guider l'utilisateur) et tips-pos (numéro de l'étape dans le guide).
 Ex : 
-<div class="tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="Bonjour, découvez mon texte à l'écran" tips-pos="3">
+< div class="tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="Bonjour, découvez mon texte à l'écran" tips-pos="3">
 	lorem ipsum
-<div>
+< / div>
 
 4 - Lancer le javascript 
 
@@ -27,8 +27,6 @@ Ex :
 		obj.init_tooltips();
 
 		//ON lANCE NOTRE GUIDE (AFFICHAGE A L'ÉCRAN)
-		$('#reclick').click(function(){
-			obj.restart();
-		});
+		obj.restart();
     });
 
