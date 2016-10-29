@@ -114,7 +114,6 @@
             }
             $('#tips-container .step').prepend('<span class="big">'+(this.idx+1)+' </span>/ '+$(".tipstools").length);
             $('body').append(this.back);
-            $(this.tipstab[this.idx]).css('z-index','100000000000000000');
             $(this.tipstab[this.idx]).addClass('relative');
             if(this.idx==0){
                   $('#tips-container button.tips-prev').hide();

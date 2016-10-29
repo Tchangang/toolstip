@@ -23,6 +23,7 @@
 
 .relative{
 	position:relative!important;
+	z-index:10000001;
 }
 
 .tips-container{
