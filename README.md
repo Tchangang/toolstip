@@ -10,3 +10,26 @@ Ex :
 <div class="tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="Bonjour, découvez mon texte à l'écran" tips-pos="3">
 	lorem ipsum
 <div>
+
+4 - Lancer le javascript 
+
+<script>
+    $(document).ready(function(){
+    	//CREATION DE MON GUIDE
+    	var obj = new myTips();
+    	//REGLER LE TEXTE DU BOUTON SUIVANT
+    	obj.setNexttext('Suivant');
+    	//REGLER LE TEXTE DU BOUTON PRECEDENT
+    	obj.setPrevtext('Suivant');
+    	//REGLER LE TEXTE DU BOUTON TERMINER
+    	obj.setFinishtext('Suivant');
+
+    	//ON lANCE L'INSTALLATION DE NOTRE GUIDE
+		obj.init_tooltips();
+
+		//ON lANCE NOTRE GUIDE (AFFICHAGE A L'ÉCRAN)
+		$('#reclick').click(function(){
+			obj.restart();
+		});
+    });
+</script>

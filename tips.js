@@ -48,6 +48,17 @@ function myTips(){
 
 };
 
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
 myTips.prototype.restart =function(){
       this.idx = 0;
       this.display();
@@ -80,6 +91,7 @@ myTips.prototype.display =function(data){
       var msg = this.tipstab[this.idx].attr('tips-msg');
       var elheight = this.tipstab[this.idx].innerHeight();
       var maxwidth = $(window).width();
+      var maxheight = $(window).height();
 
       if(Math.abs(offset.left+elwidth/2 - maxwidth) > this.tipswidth/2){
             if(offset.left+elwidth/2 > this.tipswidth/2){
@@ -119,8 +131,17 @@ myTips.prototype.display =function(data){
       $('#tips-container .step').prepend('<span class="big">'+(this.idx+1)+' </span>/ '+$(".tipstools").length);
       $('body').append(this.back);
       $(this.tipstab[this.idx]).addClass('relative');
-      // alert();
-      // $(this.tipstab[this.idx]).css('background','');
+      
+      var visibletop = $(window).scrollTop();
+      
+      if($('#tips-container').offset().top+$('#tips-container').height() < (visibletop+maxheight) && $('#tips-container').offset().top>visibletop){
+            // alert('visible');
+      }else{
+            $('html, body').animate({
+                  scrollTop: $("#tips-container").offset().top-170
+            }, 800);
+      }
+      
       if(this.idx==0){
             $('#tips-container button.tips-prev').hide();
             $('#tips-container .bottom').addClass('center');
@@ -240,10 +261,6 @@ myTips.prototype.init_tooltips=function(){
                   }
             }else{
                   here.tipstab.push($(this));
-            }
-            if(index==$('.tipstools').length-1){
-                  here.idx=0;
-                  here.display();
             }
       });
 }
