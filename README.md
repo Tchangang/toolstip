@@ -1,6 +1,8 @@
 # toolstip
 Ajoutez un guide utilisateur à votre application / site web en quelques lignes :-)
 
+Démo : https://tchangang.github.io/toolstip/index.html
+
 1 : Inclure le fichier javascript : "https://raw.githubusercontent.com/Tchangang/toolstip/master/tips.js"
 
 2 : Inclure le fichier de style : "https://cdn.rawgit.com/Tchangang/toolstip/master/tips.css"
