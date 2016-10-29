@@ -251,16 +251,21 @@ myTips.prototype.setFinishtext =function(data){
 
 myTips.prototype.init_tooltips=function(){
       var here = this;
-      console.log(here);
+
+      function compare(a,b) {
+            if (parseInt(a.attr('tips-pos')) <= parseInt(b.attr('tips-pos'))){
+                  return -1;
+            }
+            if (parseInt(a.attr('tips-pos')) > parseInt(b.attr('tips-pos'))){
+                  return 1;
+            }
+            return 0;
+      }
+      
       $(".tipstools").each(function( index ) {
-            if(here.tipstab.length>0){
-                  if(parseInt(here.tipstab[here.tipstab.length-1].attr('tips-pos'))>parseInt($(this).attr('tips-pos'))){
-                        here.tipstab.unshift($(this));
-                  }else{
-                        here.tipstab.push($(this));
-                  }
-            }else{
-                  here.tipstab.push($(this));
+            here.tipstab.push($(this));
+            if(index==$('.tipstools').length-1){
+                  here.tipstab.sort(compare);
             }
       });
 }
