@@ -30,3 +30,4 @@ Ex :
 		obj.restart();
     });
 
+5 - Démo : https://tchangang.github.io/toolstip/index.html
