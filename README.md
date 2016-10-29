@@ -13,7 +13,6 @@ Ex :
 
 4 - Lancer le javascript 
 
-<script>
     $(document).ready(function(){
     	//CREATION DE MON GUIDE
     	var obj = new myTips();
@@ -32,4 +31,4 @@ Ex :
 			obj.restart();
 		});
     });
-</script>
+
