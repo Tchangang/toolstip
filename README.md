@@ -20,6 +20,8 @@ Ex :
     $(document).ready(function(){
     	//CREATION DE MON GUIDE
     	var obj = new myTips();
+        //TAILLE DE LA FENETRE QUI AFFICHE LES INDICATIONS (par défaut : 240 px)
+        obj.setTipswidth(300);
     	//REGLER LE TEXTE DU BOUTON SUIVANT
     	obj.setNexttext('Suivant');
     	//REGLER LE TEXTE DU BOUTON PRECEDENT

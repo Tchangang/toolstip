@@ -44,7 +44,7 @@
 	    <!-- Optional theme -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-	    <link href="https://rawgit.com/Tchangang/toolstip/master/tips.css" rel="stylesheet" >
+	    <link href="https://cdn.rawgit.com/Tchangang/toolstip/master/tips.min.css" rel="stylesheet">
 	    <!-- <link href="./tips.css" rel="stylesheet" > -->
 	</head>
     <body style="padding:0px;height:100%;background:white!important;" id="body" >
@@ -94,7 +94,7 @@
 	    				</div>
 	    			</div>
 
-	    			<div class="col-md-12 tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="Les fichiers n'ont pas été 'minify' volontairement. Vous pouvez voir comment ils ont été écris et même les modifier :-) si vous le souhaitez :-)<iframe width='100%' height='auto' src='https://www.youtube.com/embed/ieq4Ugzr8Uw' frameborder='0' allowfullscreen></iframe>" tips-pos="5">
+	    			<div class="col-md-12 tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="On peut même mettre une vidéo si on veut pour montrer le déroulement d'une action à l'utilisateur. :-) <iframe width='100%' height='auto' src='https://www.youtube.com/embed/ieq4Ugzr8Uw' frameborder='0' allowfullscreen></iframe>" tips-pos="5">
 	    				Lancer le javascript
 	    				<div class="col-md-6 col-md-offset-3" style="text-align:left;margin-top:20px;">
 	    					<pre style="text-align:left;">
@@ -102,6 +102,8 @@
 	    							$(document).ready(function(){
 								    	//CREATION DE MON GUIDE
 								    	var obj = new myTips();
+								    	//TAILLE DE LA FENETRE QUI AFFICHE LES INDICATIONS (par défaut : 240)
+								    	obj.setTipswidth(300);
 								    	//REGLER LE TEXTE DU BOUTON SUIVANT
 								    	obj.setNexttext('Suivant');
 								    	//REGLER LE TEXTE DU BOUTON PRECEDENT
@@ -129,7 +131,7 @@
     		</div>
     	</div>
     	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    	<script src="https://raw.githubusercontent.com/Tchangang/toolstip/master/tips.js"></script>
+    	<script src="https://cdn.rawgit.com/Tchangang/toolstip/master/tips.min.js"></script>
     	<!--<script src="./tips.js"></script>-->
 	    <!-- Latest compiled and minified JavaScript -->
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -137,6 +139,7 @@
             $(document).ready(function(){
             	var obj = new myTips();
             	obj.setNexttext('Suivant');
+            	obj.setTipswidth(300);
 				obj.init_tooltips();
 				obj.restart();
 
