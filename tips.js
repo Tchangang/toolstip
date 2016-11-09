@@ -5,6 +5,7 @@ function myTips(){
       this.nexttext = "Suivant";
       this.prevtext = "Précédent";
       this.finishtext = "Terminer";
+      this.functionend = null;
       this.back = "<div id='backtips'></div>";
       this.show = "<div style='width:"+this.tipswidth+"px;' class='tips-container center' id='tips-container'>"+
             "<div class='step'>"+
@@ -44,6 +45,9 @@ function myTips(){
             here.idx = 0;
             $('#tips-container').remove();
             $('#backtips').remove();
+            if(here.functionend){
+                  here.functionend();
+            }
       });
 
 };
@@ -51,6 +55,10 @@ function myTips(){
 myTips.prototype.restart =function(){
       this.idx = 0;
       this.display();
+};
+
+myTips.prototype.setFunctionend = function(callback){
+      this.functionend = callback;
 };
 
 myTips.prototype.tipsnext =function(){

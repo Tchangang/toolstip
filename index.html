@@ -93,7 +93,13 @@
 	    					</pre>
 	    				</div>
 	    			</div>
-
+	    			<div class="col-md-12">
+					    <iframe src="https://www.doyoubiz.com" style="width:100%;min-height:900px;">
+					      <!-- <form url="http://example.com/action">
+					        ...
+					      </form> -->
+					    </iframe>
+					</div>
 	    			<div class="col-md-12 tipstools" style="margin-top:50x;background:white;margin-top:20px;font-size:14px;"  tips-msg="On peut même mettre une vidéo si on veut pour montrer le déroulement d'une action à l'utilisateur. :-) <iframe width='100%' height='auto' src='https://www.youtube.com/embed/ieq4Ugzr8Uw' frameborder='0' allowfullscreen></iframe>" tips-pos="5">
 	    				Lancer le javascript
 	    				<div class="col-md-6 col-md-offset-3" style="text-align:left;margin-top:20px;">
@@ -141,6 +147,13 @@
             	obj.setNexttext('Suivant');
             	obj.setTipswidth(300);
 				obj.init_tooltips();
+				
+				function setEnd(){
+					alert("C'est fini! Vous pouvez configurer une fonction qui sera appelé à la fin du parcours pour afficher un message ou whatever you like :-)");
+				}
+
+				obj.setFunctionend(setEnd);
+
 				obj.restart();
 
 				$('code').each(function () {
