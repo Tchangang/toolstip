@@ -6,6 +6,7 @@ function myTips(){
       this.prevtext = "Précédent";
       this.finishtext = "Terminer";
       this.functionend = null;
+      this.hidebutton = false;
       this.back = "<div id='backtips'></div>";
       this.show = "<div style='width:"+this.tipswidth+"px;' class='tips-container center' id='tips-container'>"+
             "<div class='step'>"+
@@ -176,6 +177,34 @@ myTips.prototype.setTipswidth =function(data){
             "</div>"+
       "</div>";
 }
+
+
+myTips.prototype.showCancelButton =function(data){
+      var visible = "visible";
+      if(!data){
+            visible = "none";
+      }
+      this.show =
+            "<div style='width:"+this.tipswidth+"px;' class='tips-container center' id='tips-container'>"+
+            "<div class='step'>"+
+            "<span style='float:right;padding-right:8px;display:"+visible+";'><button class='close' style='font-size:14px;color:white!important;'><i class='fa fa-times' aria-hidden='true'></i></button></span>"+
+            "</div>"+
+            "<div class='msg'>"+
+            "</div>"+
+            "<div class='' style='width:80%;text-align:center;margin-left:auto;margin-right:auto'>"+
+            "<hr style='margin-bottom:10px;margin-top:0px;'>"+
+            "</div>"+
+            "<div style='text-align:center;height:20px;' class='bottom'>"+
+                  "<button class='tips-prev'>"+this.prevtext+"</button>"+
+                  "<button class='tips-next'>"+this.nexttext+"</button>"+
+                  "<button class='tips-finish'>"+this.finishtext+"</button>"+
+            "</div>"+
+            "<div style='text-align:center;padding-top:20px;font-size:10px;width:100%;' class='underbottom'>"+
+                  "Powered By <b>Codepart</b> <img src='http://res.cloudinary.com/doyoubiz/image/upload/v1477737930/like_qmln3k.png' style='width:15px;height:auto;margin-left:4px;'>"+
+            "</div>"+
+      "</div>";
+}
+
 
 myTips.prototype.setNexttext =function(data){
       this.nexttext = data;
